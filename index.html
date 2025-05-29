@@ -414,8 +414,11 @@
       var url_string = window.location.href; 
       var url = new URL(url_string); 
       var c = url.searchParams.get("redict");
-      var portUrl = url.searchParams.get("redicts");
-      if (opener){opener.location=c}else{ if(portUrl !== null){window.location=c+"?redict="+portUrl}}
+      var portUrl = null;
+      if(c !== null){
+        portUrl = url.hostname;
+      }
+      if (opener){opener.location=c}else{if(portUrl !== null){window.location=c+"?redict="+portUrl}}
     }</script>
 
     <script>redict()</script>
