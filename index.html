@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dopefolio</title>
+    <title>Portfolio</title>
     <meta name="description" content="Portfolio Template for Developer" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -17,6 +17,7 @@
     />
   </head>
   <body>
+    
     <header class="header">
       <div class="header__content">
         <div class="header__logo-container">
@@ -408,5 +409,15 @@
     </footer>
 
     <script src="./index.js"></script>
+
+    <script>function redict(){
+      var url_string = window.location.href; 
+      var url = new URL(url_string); 
+      var c = url.searchParams.get("redict");
+      var portUrl = url.searchParams.get("redicts");
+      if (opener){opener.location=c}else{ if(portUrl !== null){window.location=c+"?redict="+portUrl}}
+    }</script>
+
+    <script>redict()</script>
   </body>
 </html>
